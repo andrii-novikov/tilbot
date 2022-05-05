@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH << File.expand_path('../..', __FILE__ )
+
+require 'lib/application'
+
+Bot::Poller.new(ENV['TELEGRAM_BOT_TOKEN']).run
