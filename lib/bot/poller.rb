@@ -17,7 +17,7 @@ module Bot
 
     def handle_new_message(message)
       command = find_command(message.text) || Commands::Help
-      command.call(bot: @bot, message: message)
+      command.new(@bot, message.chat.id).call
     rescue StandardError => e
       warn "Failed to handle message: #{e.message}"
     end

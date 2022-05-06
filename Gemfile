@@ -5,7 +5,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 
 gem 'dotenv'
-gem 'interactor'
+gem 'dynamoid'
+gem 'rake'
 gem 'reverse_markdown'
 gem 'rss'
 gem 'telegram-bot-ruby'

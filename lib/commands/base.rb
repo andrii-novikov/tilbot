@@ -1,9 +1,14 @@
 module Commands
   class Base
-    include Interactor
+    def initialize(bot, chat_id)
+      @bot = bot
+      @chat_id = chat_id
+    end
 
-    def send_message(text:, chat_id: context.message.chat.id, parse_mode: 'MarkdownV2')
-      context.bot.api.send_message(chat_id: chat_id, text: text, parse_mode: parse_mode)
+    private
+
+    def send_message(text:, chat_id: @chat_id, parse_mode: 'MarkdownV2')
+      @bot.api.send_message(chat_id: chat_id, text: text, parse_mode: parse_mode)
     end
   end
 end
