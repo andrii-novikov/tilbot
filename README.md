@@ -16,3 +16,11 @@ And run:
 ```shell
 bin/server
 ```
+
+# Subscription
+
+To send new posts to subsribers run
+
+```shell
+bin/subscriber
+```

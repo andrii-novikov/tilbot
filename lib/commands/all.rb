@@ -3,11 +3,7 @@ module Commands
     def call
       feed = Feed::Store.instance
 
-      text = feed.all.map.with_index do |post, i|
-        "#{i.next}\\. #{post.to_message}"
-      end.join("\n")
-
-      send_message(text: text)
+      send_message(text: Messages::Posts.new(feed.all))
     end
   end
 end

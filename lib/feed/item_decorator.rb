@@ -11,7 +11,7 @@ module Feed
     private
 
     def sanitize(str)
-      str.gsub(/[-#\[\]().+_]/, '\\\\\0')
+      str.gsub(/[-#\[\]().+_!]/, '\\\\\0')
     end
   end
 end
